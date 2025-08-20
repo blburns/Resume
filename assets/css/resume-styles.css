@@ -1,0 +1,1174 @@
+/* ========================================
+   BLBurns Resume & CV Styles
+   ======================================== */
+
+/* ========================================
+   BOOTSTRAP 5 OVERRIDES & CUSTOM STYLES
+   ======================================== */
+
+/* ========================================
+   CUSTOM VARIABLES
+   ======================================== */
+:root {
+    --primary-color: #4a5568;
+    --secondary-color: #2d3748;
+    --accent-color: #e2e8f0;
+    --text-color: #2d3748;
+    --light-bg: #f8fafc;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    --border-radius: 0px;
+    --section-spacing: 2.5rem;
+}
+
+/* ========================================
+   FONT FACE DECLARATIONS
+   ======================================== */
+
+/* EB Garamond - Serif Font */
+/*
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../fonts/EB_Garamond/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 800;
+    font-style: italic;
+    font-display: swap;
+}
+*/
+
+/* Open Sans - Sans-Serif Font */
+/*
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 300 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 300 800;
+    font-style: italic;
+    font-display: swap;
+}
+*/
+
+/* Roboto - Sans-Serif Font */
+/*
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+*/
+
+/* Lato - Sans-Serif Font */
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+*/
+
+/* Noto Sans Georgian - Georgian Script Font */
+/*
+@font-face {
+    font-family: 'Noto Sans Georgian';
+    src: url('../fonts/Noto_Sans_Georgian/NotoSansGeorgian-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+*/
+
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+
+/* TEST - This should be visible everywhere */
+body::after {
+    content: "CSS FILE LOADED SUCCESSFULLY" !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    background: green !important;
+    color: white !important;
+    padding: 10px !important;
+    z-index: 9999 !important;
+    font-size: 16px !important;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f7fafc;
+}
+
+/* ========================================
+   LAYOUT & CONTAINER
+   ======================================== */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+/* ========================================
+   HEADER STYLES
+   ======================================== */
+.header {
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    color: white;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    z-index: 1;
+}
+
+.header h1,
+.header h2,
+.header .contact-info {
+    position: relative;
+    z-index: 2;
+}
+
+.header h1 {
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.header h2 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.95;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+/* ========================================
+   CONTACT INFORMATION
+   ======================================== */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: white;
+}
+
+.contact-item svg {
+    fill: currentColor;
+    color: white;
+}
+
+.contact-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+.main-content {
+    padding: 2.5rem;
+}
+
+.section {
+    margin-bottom: var(--section-spacing);
+}
+
+.section h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    position: relative;
+}
+
+/* ========================================
+   EXPORT BUTTONS
+   ======================================== */
+.export-buttons {
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.95) 0%, rgba(226, 232, 240, 0.95) 100%);
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+    flex-wrap: wrap;
+}
+
+.export-buttons.scrolled {
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.98) 0%, rgba(226, 232, 240, 0.98) 100%);
+}
+
+.export-btn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-width: 140px;
+    justify-content: center;
+}
+
+.export-btn:hover {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.export-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.export-btn .export-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    color: white;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: absolute;
+    left: 2rem;
+    top: 1.25rem;
+    z-index: 1001;
+    min-height: 44px;
+    min-width: 140px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-family: inherit;
+    justify-content: center;
+}
+
+.back-link:hover {
+    color: white;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Sticky state when scrolling */
+.back-link.sticky {
+    position: fixed !important;
+    top: 1rem !important;
+    left: 2rem !important;
+    z-index: 1002 !important;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+    transform: scale(1.05) !important;
+    border-radius: 8px !important;
+}
+
+.back-link::before {
+    content: '←';
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* ========================================
+   SKILLS GRID
+   ======================================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.research-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.skill-category {
+    background: var(--light-bg);
+    padding: 1rem;
+    border-radius: 0px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.skill-category h4 {
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.skill-list {
+    list-style: none;
+}
+.skill-list ol, ul {
+
+        padding-left: 0;
+}
+
+.skill-list li {
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    padding-left: 1rem;
+    position: relative;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.skill-list li::before {
+    content: '▸';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ========================================
+   CERTIFICATIONS
+   ======================================== */
+.certifications {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+}
+
+.cert-category {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 0px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.certifications h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.certifications h4:first-of-type {
+    margin-top: 0;
+}
+
+.cert-item {
+    background: var(--light-bg);
+    padding: 1rem;
+    border-radius: 0px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.cert-name {
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+}
+
+.cert-org {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+}
+
+.cert-date {
+    color: #718096;
+    font-size: 0.75rem;
+}
+
+/* ========================================
+   PROJECTS GRID
+   ======================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-item {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 0px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.project-header {
+    margin-bottom: 1rem;
+}
+
+.project-header h4 {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+}
+
+.project-content {
+    font-size: 0.85rem;
+}
+
+.project-section {
+    margin-bottom: 1rem;
+}
+
+.project-section h5 {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-section p {
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
+
+/* ========================================
+   RESEARCH PROJECTS
+   ======================================== */
+.research-projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* ========================================
+   CONTRIBUTIONS
+   ======================================== */
+.contributions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.contribution-category {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 0px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.contribution-category h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.contribution-list {
+    list-style: none;
+}
+
+.contribution-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.bullet-point {
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+.contribution-text {
+    color: var(--text-color);
+}
+
+/* ========================================
+   EXPERIENCE
+   ======================================== */
+.experience-item {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 0px;
+    border-left: 3px solid var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.experience-header-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1;
+}
+
+.experience-header-content {
+    flex: 1;
+}
+
+.job-header-with-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.job-title {
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.company {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.company-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 0px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.company-logo:hover {
+    transform: scale(1.05);
+}
+
+.date {
+    color: #718096;
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+.description ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.description li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.85rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.description li::before {
+    content: '▸';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ========================================
+   EDUCATION
+   ======================================== */
+.education-item {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 0px;
+    border-left: 3px solid var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.degree {
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.description {
+    color: var(--text-color);
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   ACHIEVEMENTS
+   ======================================== */
+.achievements {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.achievement-item {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 0px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.achievement-header h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.achievement-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.achievement-content li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.85rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.achievement-content li::before {
+    content: '▸';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 1024px) {
+    .export-buttons {
+        padding: 1rem 1.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .back-link {
+        left: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        margin: 10px;
+        border-radius: 0px;
+        overflow-x: hidden;
+    }
+    
+    /* Prevent any content from overflowing - exclude images */
+    *:not(img):not(.company-logo) {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .header {
+        padding: 2rem 1.5rem;
+    }
+    
+    .main-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    /* Ensure all grid items have proper spacing */
+    .skill-category,
+    .contribution-category,
+    .cert-item,
+    .achievement-item,
+    .project-item {
+        margin-bottom: 1rem;
+        min-width: 0;
+        width: 100%;
+    }
+    
+    .export-buttons {
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        gap: 0.75rem;
+        position: relative;
+        z-index: 1000;
+    }
+    
+    .export-btn {
+        min-width: 100%;
+        justify-content: center;
+    }
+    
+    .back-link {
+        position: absolute;
+        top: 1rem;
+        left: 1.5rem;
+        z-index: 1001;
+        min-height: 48px;
+        padding: 0.75rem 1.25rem;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        border: none;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        width: auto;
+        margin: 0;
+        cursor: pointer;
+        font-family: inherit;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-width: 140px;
+        font-size: 0.9rem;
+    }
+    
+    .back-link.sticky {
+        position: fixed !important;
+        top: 1rem !important;
+        left: 1.5rem !important;
+        z-index: 1002 !important;
+        background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+        transform: scale(1.05) !important;
+        border-radius: 8px !important;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .research-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .certifications {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .contributions {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .achievements {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Catch-all for any remaining grid layouts */
+    [class*="grid"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Specific override for any auto-fit grids with minmax */
+    .skills-grid,
+    .projects-grid,
+    .contributions {
+        grid-template-columns: 1fr !important;
+        min-width: 0;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .experience-header-left {
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 1rem !important;
+    }
+    
+    .job-header-with-logo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    /* CV version - force proper logo spacing */
+    .experience-item .experience-header .experience-header-left > .company-logo {
+        width: 48px !important;
+        height: 48px !important;
+        margin: 0 !important;
+        display: block !important;
+        flex-shrink: 0 !important;
+        object-fit: contain !important;
+    }
+    
+    .experience-header-left > .experience-header-content {
+        text-align: left !important;
+        width: auto !important;
+        margin: 0 !important;
+        flex: 1 !important;
+    }
+    
+    .experience-header-left .job-title {
+        margin-bottom: 0.5rem !important;
+        font-size: 0.9rem;
+    }
+    
+    .experience-header-left .company {
+        margin: 0 !important;
+        font-size: 0.85rem;
+    }
+    
+    /* General company logo rules */
+    .company-logo {
+        width: 48px !important;
+        height: 48px !important;
+        flex-shrink: 0;
+        object-fit: contain;
+    }
+    
+    /* Default company logo spacing for most structures */
+    .job-header-with-logo .company-logo {
+        margin-bottom: 0.5rem;
+    }
+    
+    .date {
+        text-align: left;
+    }
+    
+    .contact-info {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* TEST - This should be visible on small mobile */
+    body::before {
+        content: "SMALL MOBILE CSS LOADED - 480px" !important;
+        position: fixed !important;
+        top: 50px !important;
+        left: 0 !important;
+        background: blue !important;
+        color: white !important;
+        padding: 10px !important;
+        z-index: 9999 !important;
+        font-size: 20px !important;
+    }
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .header h2 {
+        font-size: 1rem;
+    }
+    
+    .export-buttons {
+        padding: 0.75rem 1rem;
+        gap: 0.5rem;
+        position: relative;
+        z-index: 1000;
+    }
+    
+    .export-btn {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    /* Extra mobile grid overrides */
+    .skills-grid,
+    .research-grid,
+    .certifications,
+    .certifications-grid,
+    .contributions,
+    .achievements,
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        min-width: 0 !important;
+    }
+    
+    /* Force single column for any missed grids */
+    [class*="grid"],
+    [class*="certifications"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Ensure company logos stay proper size on small screens */
+    .job-header-with-logo .company-logo {
+        width: 40px !important;
+        height: 40px !important;
+        margin: 0 auto 0.5rem auto;
+    }
+    
+    /* Center experience content on very small screens */
+    .experience-header-content,
+    .job-info {
+        text-align: center;
+    }
+    
+    /* CV version specific fixes for very small screens */
+    .experience-header-left {
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 0.75rem !important;
+        flex-direction: row !important;
+    }
+    
+    .experience-item .experience-header .experience-header-left > .company-logo {
+        width: 40px !important;
+        height: 40px !important;
+        margin: 0 !important;
+        display: block !important;
+        flex-shrink: 0 !important;
+        object-fit: contain !important;
+    }
+    
+    .experience-header-left > .experience-header-content {
+        text-align: left !important;
+        width: auto !important;
+        margin: 0 !important;
+        flex: 1 !important;
+    }
+    
+    .experience-header-left .job-title {
+        margin-bottom: 0.25rem !important;
+        font-size: 0.85rem;
+    }
+    
+    .experience-header-left .company {
+        margin: 0 !important;
+        font-size: 0.8rem;
+    }
+    
+    /* Enhanced back button for very small screens */
+    .back-link {
+        position: absolute !important;
+        top: 0.75rem !important;
+        left: 1rem !important;
+        min-height: 44px !important;
+        padding: 0.75rem 1.25rem !important;
+        font-size: 0.9rem;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: rgba(74, 85, 104, 0.2);
+        cursor: pointer !important;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+        border: none !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        width: auto !important;
+        margin: 0 !important;
+        align-self: center !important;
+        font-family: inherit !important;
+        color: white !important;
+        z-index: 1001 !important;
+        min-width: 140px !important;
+    }
+    
+    .back-link.sticky {
+        position: fixed !important;
+        top: 0.75rem !important;
+        left: 1rem !important;
+        z-index: 1002 !important;
+        background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+        transform: scale(1.05) !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Ensure back button is always clickable */
+    .back-link:active {
+        background: #e0e0e0 !important;
+        transform: scale(0.98);
+    }
+    
+    /* Fix for potential iOS Safari issues */
+    .export-buttons * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .back-link {
+        -webkit-tap-highlight-color: rgba(74, 85, 104, 0.3) !important;
+        /* Ensure maximum compatibility */
+        pointer-events: auto !important;
+        position: relative !important;
+        z-index: 9999 !important;
+        background: rgba(248, 250, 252, 0.9);
+        border: 1px solid rgba(74, 85, 104, 0.2);
+    }
+}
