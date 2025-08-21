@@ -2,6 +2,8 @@
 
 A modern, responsive portfolio showcasing professional experience, technical skills, and achievements with multiple resume formats and export capabilities.
 
+**Last Updated: August 2025**
+
 ## 🚀 Features
 
 ### **Multiple Resume Formats**
@@ -10,8 +12,8 @@ A modern, responsive portfolio showcasing professional experience, technical ski
 - **Online Resume** (`BLBurns_Resume_Online_2025.html`) - Enhanced visual presentation
 
 ### **Interactive Elements**
-- **Sticky Navigation** - Export buttons and back navigation stay visible while scrolling
-- **Smart Back Button** - Initially uniform with export buttons, becomes sticky with distinct styling when scrolling
+- **Smart Sticky Navigation** - Export buttons and back navigation with intelligent sticky behavior
+- **Adaptive Back Button** - Initially uniform with export buttons, transforms to sticky navigation when scrolling
 - **Export Functionality** - Markdown export and print capabilities
 - **Responsive Design** - Optimized for desktop, tablet, and mobile devices
 
@@ -20,6 +22,7 @@ A modern, responsive portfolio showcasing professional experience, technical ski
 - **Responsive Breakpoints** - 1024px (tablet), 768px (mobile), 480px (small mobile)
 - **Cross-browser Compatibility** - Optimized for modern browsers
 - **Performance Optimized** - Efficient CSS and minimal JavaScript
+- **Touch-Optimized** - Enhanced mobile experience with proper touch targets
 
 ## 📁 Project Structure
 
@@ -27,10 +30,10 @@ A modern, responsive portfolio showcasing professional experience, technical ski
 Resume/
 ├── assets/
 │   ├── css/
-│   │   └── resume-styles.css          # Main stylesheet
+│   │   └── resume-styles.css          # Main stylesheet with responsive design
 │   ├── js/
-│   │   └── resume-export.js           # Export functionality
-│   ├── icons/                         # Company logos and icons
+│   │   └── resume-export.js           # Export functionality + sticky navigation
+│   ├── icons/                         # Company logos and icons (lowercase naming)
 │   └── fonts/                         # Typography assets
 ├── BLBurns_Resume_2025.html          # Professional resume
 ├── BLBurns_CV_2025.html              # Curriculum vitae
@@ -46,20 +49,23 @@ Resume/
 - **Secondary**: `#2d3748` (Dark slate)
 - **Accent**: `#e2e8f0` (Light gray)
 - **Background**: `#f8fafc` (Off-white)
+- **Interactive**: Gradient backgrounds for buttons and navigation
 
 ### **Typography**
 - **Primary Font**: Lato (variable weight)
 - **Fallbacks**: Segoe UI, Tahoma, Geneva, Verdana, sans-serif
 - **Responsive Sizing**: Scales appropriately across devices
+- **Readability**: Optimized line heights and spacing for all screen sizes
 
 ### **Layout Components**
-- **Sticky Header**: Export buttons with backdrop blur effect
-- **Grid Systems**: Responsive grids for skills, experience, and certifications
-- **Card Design**: Consistent card styling with left borders and shadows
+- **Adaptive Header** - Export buttons with backdrop blur effect
+- **Smart Grid Systems** - Responsive grids that stack on mobile
+- **Card Design** - Consistent card styling with left borders and shadows
+- **Mobile-First Navigation** - Touch-optimized buttons and navigation
 
 ## 📱 Responsive Design
 
-### **Breakpoints**
+### **Breakpoints & Behavior**
 - **Desktop**: > 1024px - Full layout with side-by-side elements
 - **Tablet**: 768px - 1024px - Adjusted spacing and layout
 - **Mobile**: < 768px - Stacked layout, optimized touch targets
@@ -67,9 +73,17 @@ Resume/
 
 ### **Mobile Optimizations**
 - **Touch Targets**: Minimum 44px for all interactive elements
-- **Grid Layouts**: Single-column layouts on small screens
+- **Grid Layouts**: Single-column layouts on small screens with proper overflow handling
 - **Typography**: Optimized font sizes for readability
-- **Navigation**: Sticky back button with enhanced mobile styling
+- **Navigation**: Smart sticky back button with enhanced mobile styling
+- **Company Logos**: Proper positioning and sizing across all screen sizes
+- **Content Overflow**: Prevents horizontal scrolling on mobile devices
+
+### **Responsive Features**
+- **Flexible Grids** - Automatically stack to single column on mobile
+- **Adaptive Spacing** - Reduced margins and padding on small screens
+- **Touch-Friendly** - Enhanced button interactions and hover states
+- **Content Flow** - Logical stacking order for mobile readability
 
 ## 🛠️ Technical Implementation
 
@@ -78,17 +92,20 @@ Resume/
 - **Mobile-First Approach** - Base styles for mobile, enhanced for larger screens
 - **Modular Components** - Reusable CSS classes for consistent styling
 - **Performance Optimized** - Efficient selectors and minimal repaints
+- **Specificity Management** - Strategic use of `!important` for mobile overrides
 
 ### **JavaScript Features**
 - **Scroll Detection** - Monitors scroll position for sticky navigation
 - **Export Functions** - Markdown conversion and print functionality
 - **Event Handling** - Responsive interactions across all devices
 - **Error Handling** - Graceful fallbacks for export operations
+- **Touch Optimization** - Enhanced mobile interaction handling
 
 ### **Browser Support**
 - **Modern Browsers** - Chrome, Firefox, Safari, Edge (latest versions)
 - **Mobile Browsers** - iOS Safari, Chrome Mobile, Samsung Internet
 - **Progressive Enhancement** - Core functionality works without JavaScript
+- **Touch Support** - Optimized for touch devices and mobile browsers
 
 ## 🚀 Getting Started
 
@@ -97,18 +114,21 @@ Resume/
 2. Open `index.html` in a web browser
 3. Navigate between different resume formats
 4. Test responsive design by resizing browser window
+5. Test mobile experience using browser dev tools
 
 ### **Deployment**
 1. Upload all files to your web server
 2. Ensure `assets/` folder structure is maintained
 3. Test all resume formats and export functionality
 4. Verify mobile responsiveness across devices
+5. Test sticky navigation and mobile interactions
 
 ### **Customization**
 - **Colors**: Modify CSS custom properties in `:root`
 - **Content**: Update HTML files with your information
 - **Styling**: Adjust CSS classes for different visual preferences
 - **Icons**: Replace company logos in `assets/icons/` folder
+- **Responsiveness**: Modify breakpoints in CSS media queries
 
 ## 📋 Resume Content
 
@@ -135,6 +155,11 @@ Resume/
 - Quantum Computing & Post-Quantum Cryptography
 - Scientific Computing & High-Performance Computing
 
+### **Education & Certifications**
+- **Current**: Information Technology Studies (Expected completion: May 2026)
+- **Institution**: Houston Community College, North Harris College
+- **Planned**: AWS Solutions Architect Associate (Q2 2026), Google Cloud Professional Cloud Architect (Q4 2026)
+
 ## 🔧 Browser Compatibility
 
 ### **Supported Features**
@@ -143,11 +168,28 @@ Resume/
 - Backdrop Filter (with fallbacks)
 - Modern JavaScript (ES6+)
 - Touch Events (mobile devices)
+- Scroll-based interactions
 
 ### **Fallbacks**
 - Graceful degradation for older browsers
 - Alternative layouts for unsupported CSS features
 - Print-friendly styles for all resume formats
+- Touch-friendly alternatives for non-touch devices
+
+## 📱 Mobile Experience
+
+### **Key Mobile Features**
+- **Sticky Navigation** - Back button becomes sticky when scrolling
+- **Touch Optimization** - Proper touch targets and interaction feedback
+- **Responsive Grids** - Content stacks properly on small screens
+- **Company Logo Positioning** - Optimized layout for experience sections
+- **Export Functionality** - Full-featured on mobile devices
+
+### **Mobile Testing**
+- Tested on iOS Safari, Chrome Mobile, Samsung Internet
+- Verified touch interactions and scroll behavior
+- Optimized for various mobile screen sizes
+- Enhanced accessibility for mobile users
 
 ## 📄 License
 
@@ -160,6 +202,7 @@ While this is a personal portfolio project, suggestions for improvements are wel
 - Accessibility improvements
 - Performance optimizations
 - Cross-browser compatibility fixes
+- Mobile experience enhancements
 
 ## 📞 Contact
 
@@ -169,4 +212,4 @@ While this is a personal portfolio project, suggestions for improvements are wel
 
 ---
 
-*Built with modern web technologies and responsive design principles.*
+*Built with modern web technologies, responsive design principles, and mobile-first development approach.*
