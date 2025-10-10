@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.L. Burns - Enhanced Resume Portfolio</title>
+    
+    <!-- Enhanced Meta Tags for SEO -->
+    <meta name="description" content="B.L. Burns - Senior Systems Engineer & DevOps Specialist with 10+ years experience in enterprise infrastructure, cloud architecture, and automation">
+    <meta name="keywords" content="systems engineer, devops, infrastructure, cloud, automation, terraform, ansible, aws, kubernetes">
+    <meta name="author" content="B.L. Burns">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="B.L. Burns - Senior Systems Engineer & DevOps Specialist">
+    <meta property="og:description" content="Experienced systems engineer specializing in DevOps, infrastructure automation, and cloud architecture">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blburns.com">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="B.L. Burns - Senior Systems Engineer">
+    <meta name="twitter:description" content="DevOps Specialist with expertise in infrastructure automation and cloud solutions">
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4a5568">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/enhanced-styles.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-brand">
+                    <h1>B.L. Burns</h1>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#github" class="nav-link">GitHub</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-right">
+                <div class="color-palette-selector">
+                    <button class="palette-toggle" onclick="togglePaletteMenu()" title="Select Color Palette">
+                        <i class="fas fa-palette"></i>
+                    </button>
+                    <div class="palette-menu" id="paletteMenu">
+                        <div class="palette-grid">
+                            <div class="palette-swatch" onclick="selectPalette('ocean')" data-palette="ocean" title="Ocean">
+                                <div class="swatch ocean-swatch"></div>
+                            </div>
+                            <div class="palette-swatch" onclick="selectPalette('mint')" data-palette="mint" title="Mint">
+                                <div class="swatch mint-swatch"></div>
+                            </div>
+                            <div class="palette-swatch" onclick="selectPalette('orange')" data-palette="orange" title="Orange">
+                                <div class="swatch orange-swatch"></div>
+                            </div>
+                            <div class="palette-swatch" onclick="selectPalette('lime')" data-palette="lime" title="Lime">
+                                <div class="swatch lime-swatch"></div>
+                            </div>
+                            <div class="palette-swatch" onclick="selectPalette('peach')" data-palette="peach" title="Peach">
+                                <div class="swatch peach-swatch"></div>
+                            </div>
+                            <div class="palette-swatch" onclick="selectPalette('blue')" data-palette="blue" title="Blue">
+                                <div class="swatch blue-swatch"></div>
+                            </div>
+                            <div class="palette-swatch" onclick="selectPalette('emerald')" data-palette="emerald" title="Emerald">
+                                <div class="swatch emerald-swatch"></div>
+                            </div>
+                            <div class="palette-swatch" onclick="selectPalette('amber')" data-palette="amber" title="Amber">
+                                <div class="swatch amber-swatch"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">B.L. Burns</h1>
+                <h2 class="hero-subtitle">Senior Systems Engineer & DevOps Specialist</h2>
+                <p class="hero-description">
+                    Senior Systems Engineer with 15+ years of experience designing, implementing, and maintaining enterprise infrastructure solutions. Expert in Linux systems administration, cloud platforms, and DevOps automation with a proven track record of optimizing performance, enhancing security, and driving operational excellence across complex IT environments.
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="tech-stack">
+                    <div class="tech-stack-column">
+                        <div class="tech-item" data-tech="PostgreSQL">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postgresql.svg" alt="PostgreSQL" />
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-item" data-tech="Redis">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/redis.svg" alt="Redis" />
+                            <span>Redis</span>
+                        </div>
+                        <div class="tech-item" data-tech="MySQL">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg" alt="MySQL" />
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-item" data-tech="MongoDB">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mongodb.svg" alt="MongoDB" />
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-item" data-tech="Elasticsearch">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/elasticsearch.svg" alt="Elasticsearch" />
+                            <span>Elasticsearch</span>
+                        </div>
+                        <div class="tech-item" data-tech="Apache Kafka">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/apachekafka.svg" alt="Apache Kafka" />
+                            <span>Apache Kafka</span>
+                        </div>
+                        <div class="tech-item" data-tech="Apache Spark">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/apachespark.svg" alt="Apache Spark" />
+                            <span>Apache Spark</span>
+                        </div>
+                        <div class="tech-item" data-tech="RabbitMQ">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/rabbitmq.svg" alt="RabbitMQ" />
+                            <span>RabbitMQ</span>
+                        </div>
+                        <div class="tech-item" data-tech="Apache Airflow">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/apacheairflow.svg" alt="Apache Airflow" />
+                            <span>Apache Airflow</span>
+                        </div>
+                        <div class="tech-item" data-tech="dbt">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/dbt.svg" alt="dbt" />
+                            <span>dbt</span>
+                        </div>
+                        <div class="tech-item" data-tech="Docker">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" alt="Docker" />
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-item" data-tech="Terraform">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/terraform.svg" alt="Terraform" />
+                            <span>Terraform</span>
+                        </div>
+                        <div class="tech-item" data-tech="Jenkins">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jenkins.svg" alt="Jenkins" />
+                            <span>Jenkins</span>
+                        </div>
+                        <div class="tech-item" data-tech="Travis CI">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/travisci.svg" alt="Travis CI" />
+                            <span>Travis CI</span>
+                        </div>
+                        <div class="tech-item" data-tech="Packer">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/hashicorp.svg" alt="Packer" />
+                            <span>Packer</span>
+                        </div>
+                        <div class="tech-item" data-tech="Vagrant">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/vagrant.svg" alt="Vagrant" />
+                            <span>Vagrant</span>
+                        </div>
+                        <div class="tech-item" data-tech="Python">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python" />
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item" data-tech="C">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/c.svg" alt="C" />
+                            <span>C</span>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="tech-item" data-tech="PostgreSQL">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postgresql.svg" alt="PostgreSQL" />
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-item" data-tech="Redis">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/redis.svg" alt="Redis" />
+                            <span>Redis</span>
+                        </div>
+                        <div class="tech-item" data-tech="MySQL">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg" alt="MySQL" />
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-stack-column">
+                        <div class="tech-item" data-tech="C++">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cplusplus.svg" alt="C++" />
+                            <span>C++</span>
+                        </div>
+                        <div class="tech-item" data-tech="Spring">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/spring.svg" alt="Spring" />
+                            <span>Spring</span>
+                        </div>
+                        <div class="tech-item" data-tech="Kotlin">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kotlin.svg" alt="Kotlin" />
+                            <span>Kotlin</span>
+                        </div>
+                        <div class="tech-item" data-tech=".NET">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/dotnet.svg" alt=".NET" />
+                            <span>.NET</span>
+                        </div>
+                        <div class="tech-item" data-tech="Looker">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/looker.svg" alt="Looker" />
+                            <span>Looker</span>
+                        </div>
+                        <div class="tech-item" data-tech="Metabase">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/metabase.svg" alt="Metabase" />
+                            <span>Metabase</span>
+                        </div>
+                        <div class="tech-item" data-tech="Stripe">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/stripe.svg" alt="Stripe" />
+                            <span>Stripe</span>
+                        </div>
+                        <div class="tech-item" data-tech="Ansible">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/ansible.svg" alt="Ansible" />
+                            <span>Ansible</span>
+                        </div>
+                        <div class="tech-item" data-tech="Chef">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/chef.svg" alt="Chef" />
+                            <span>Chef</span>
+                        </div>
+                        <div class="tech-item" data-tech="GitHub">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" />
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tech-item" data-tech="Bitbucket">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/bitbucket.svg" alt="Bitbucket" />
+                            <span>Bitbucket</span>
+                        </div>
+                        <div class="tech-item" data-tech="Jira">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jira.svg" alt="Jira" />
+                            <span>Jira</span>
+                        </div>
+                        <div class="tech-item" data-tech="Confluence">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/confluence.svg" alt="Confluence" />
+                            <span>Confluence</span>
+                        </div>
+                        <div class="tech-item" data-tech="Flask">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/flask.svg" alt="Flask" />
+                            <span>Flask</span>
+                        </div>
+                        <div class="tech-item" data-tech="VMware">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/vmware.svg" alt="VMware" />
+                            <span>VMware</span>
+                        </div>
+                        <div class="tech-item" data-tech="QEMU">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/qemu.svg" alt="QEMU" />
+                            <span>QEMU</span>
+                        </div>
+                        <div class="tech-item" data-tech="PostgreSQL">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/postgresql.svg" alt="PostgreSQL" />
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-item" data-tech="Redis">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/redis.svg" alt="Redis" />
+                            <span>Redis</span>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="tech-item" data-tech="C++">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cplusplus.svg" alt="C++" />
+                            <span>C++</span>
+                        </div>
+                        <div class="tech-item" data-tech="Spring">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/spring.svg" alt="Spring" />
+                            <span>Spring</span>
+                        </div>
+                        <div class="tech-item" data-tech="Kotlin">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kotlin.svg" alt="Kotlin" />
+                            <span>Kotlin</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-stack-column">
+                        <div class="tech-item" data-tech="MySQL">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg" alt="MySQL" />
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-item" data-tech="MongoDB">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mongodb.svg" alt="MongoDB" />
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-item" data-tech="Elasticsearch">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/elasticsearch.svg" alt="Elasticsearch" />
+                            <span>Elasticsearch</span>
+                        </div>
+                        <div class="tech-item" data-tech="Apache Kafka">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/apachekafka.svg" alt="Apache Kafka" />
+                            <span>Apache Kafka</span>
+                        </div>
+                        <div class="tech-item" data-tech="Apache Spark">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/apachespark.svg" alt="Apache Spark" />
+                            <span>Apache Spark</span>
+                        </div>
+                        <div class="tech-item" data-tech="RabbitMQ">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/rabbitmq.svg" alt="RabbitMQ" />
+                            <span>RabbitMQ</span>
+                        </div>
+                        <div class="tech-item" data-tech="Apache Airflow">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/apacheairflow.svg" alt="Apache Airflow" />
+                            <span>Apache Airflow</span>
+                        </div>
+                        <div class="tech-item" data-tech="dbt">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/dbt.svg" alt="dbt" />
+                            <span>dbt</span>
+                        </div>
+                        <div class="tech-item" data-tech="Docker">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" alt="Docker" />
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-item" data-tech="Terraform">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/terraform.svg" alt="Terraform" />
+                            <span>Terraform</span>
+                        </div>
+                        <div class="tech-item" data-tech="Jenkins">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/jenkins.svg" alt="Jenkins" />
+                            <span>Jenkins</span>
+                        </div>
+                        <div class="tech-item" data-tech="Travis CI">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/travisci.svg" alt="Travis CI" />
+                            <span>Travis CI</span>
+                        </div>
+                        <div class="tech-item" data-tech="Packer">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/hashicorp.svg" alt="Packer" />
+                            <span>Packer</span>
+                        </div>
+                        <div class="tech-item" data-tech="Vagrant">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/vagrant.svg" alt="Vagrant" />
+                            <span>Vagrant</span>
+                        </div>
+                        <div class="tech-item" data-tech="Python">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python" />
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-item" data-tech="C">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/c.svg" alt="C" />
+                            <span>C</span>
+                        </div>
+                        <div class="tech-item" data-tech="C++">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/cplusplus.svg" alt="C++" />
+                            <span>C++</span>
+                        </div>
+                        <div class="tech-item" data-tech="Spring">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/spring.svg" alt="Spring" />
+                            <span>Spring</span>
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="tech-item" data-tech="MySQL">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mysql.svg" alt="MySQL" />
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-item" data-tech="MongoDB">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/mongodb.svg" alt="MongoDB" />
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-item" data-tech="Elasticsearch">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/elasticsearch.svg" alt="Elasticsearch" />
+                            <span>Elasticsearch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Senior Systems Engineer with over 15 years of experience in enterprise infrastructure design and management. 
+                        My expertise spans Linux systems administration, cloud platforms (AWS, Google Cloud, IBM Cloud), and DevOps automation 
+                        tools including Kubernetes, Terraform, and Ansible. I specialize in optimizing system performance, implementing robust 
+                        security measures, and driving operational excellence through automation and process improvement initiatives.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">99.8%</div>
+                            <div class="stat-label">System Uptime</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">60%</div>
+                            <div class="stat-label">Deployment Time Reduction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="profile-info">
+                            <h3>B.L. Burns</h3>
+                            <p>Senior Systems Engineer</p>
+                            <div class="profile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Austin, TX • USA
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            
+            <!-- Skills Grid -->
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h4>Operating Systems & Platforms</h4>
+                    <ul>
+                        <li>Linux (Debian, Red Hat, Ubuntu, CentOS, Gentoo)</li>
+                        <li>Windows Server & Desktop</li>
+                        <li>VMware ESX/vSphere/vCenter</li>
+                        <li>FreeBSD & macOS</li>
+                        <li>Container Platforms (Docker, LXC, LXD)</li>
+                        <li>Serverless Computing (AWS Lambda, Google Cloud Functions)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4>Programming & Automation</h4>
+                    <ul>
+                        <li>Java & Kotlin</li>
+                        <li>C# & .NET</li>
+                        <li>Python & Perl</li>
+                        <li>Bash & PowerShell Scripting</li>
+                        <li>SQL & Database Management</li>
+                        <li>API Development & Integration</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Networking & Security</h4>
+                    <ul>
+                        <li>Cisco IOS & NX-OS</li>
+                        <li>Juniper SRX & EX</li>
+                        <li>Firewall Management (Checkpoint, Fortinet, SonicWall, Vyatta)</li>
+                        <li>Load Balancing & CDN</li>
+                        <li>VPN & Remote Access</li>
+                        <li>Network Monitoring & Analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Monitoring & Observability</h4>
+                    <ul>
+                        <li>Nagios & Prometheus</li>
+                        <li>Grafana Dashboards</li>
+                        <li>ELK Stack (Elasticsearch, Logstash, Kibana)</li>
+                        <li>SNMP Monitoring</li>
+                        <li>Performance Metrics & Alerting</li>
+                        <li>Application Performance Monitoring (APM)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>Configuration Management & Deployment</h4>
+                    <ul>
+                        <li>Ansible & Bash</li>
+                        <li>Docker, LXC, LXD, FreeBSD Jails</li>
+                        <li>Packer, Vagrant, Terraform</li>
+                        <li>System Deployment (Kickstart, debconf, SCCM)</li>
+                        <li>NETCONF/YANG Configuration Management</li>
+                        <li>Infrastructure as Code (IaC)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h4>Cloud & DevOps Tools</h4>
+                    <ul>
+                        <li>AWS, Google Cloud, IBM Cloud</li>
+                        <li>Jenkins, GitHub Actions & Travis CI</li>
+                        <li>Git & Version Control</li>
+                        <li>Terraform</li>
+                        <li>CI/CD Pipeline Development</li>
+                        <li>Site Reliability Engineering (SRE)</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4>Database & Storage</h4>
+                    <ul>
+                        <li>MySQL, PostgreSQL, MongoDB</li>
+                        <li>Redis, Memcached, Elasticsearch</li>
+                        <li>Storage Area Networks (SAN)</li>
+                        <li>Network Attached Storage (NAS)</li>
+                        <li>Backup & Disaster Recovery</li>
+                        <li>Data Replication & Clustering</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h4>Security & Compliance</h4>
+                    <ul>
+                        <li>Identity & Access Management (IAM)</li>
+                        <li>Multi-Factor Authentication (MFA)</li>
+                        <li>Security Information & Event Management (SIEM)</li>
+                        <li>Encryption & Key Management</li>
+                        <li>Security Auditing & Compliance</li>
+                        <li>PCI DSS, HIPAA, SOX, ISO 27001</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h4>Performance & Optimization</h4>
+                    <ul>
+                        <li>Load Testing & Performance Analysis</li>
+                        <li>Capacity Planning & Scaling</li>
+                        <li>Application Performance Monitoring (APM)</li>
+                        <li>Database Query Optimization</li>
+                        <li>Network Performance Tuning</li>
+                        <li>Resource Utilization Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Senior Systems Engineer</h3>
+                            <span class="timeline-company">Independent Consulting</span>
+                            <span class="timeline-date">2020 - Present</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Lead enterprise infrastructure projects for multiple clients, delivering scalable solutions that improve operational efficiency by 25-40%</li>
+                                <li>Design and implement hybrid cloud architectures integrating on-premise infrastructure with AWS and Google Cloud Platform</li>
+                                <li>Develop automated deployment pipelines using Jenkins, Travis CI, and Ansible, reducing deployment time by 60%</li>
+                                <li>Establish comprehensive monitoring and alerting systems using Prometheus, Grafana, and ELK stack for proactive issue resolution</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Google Cloud</span>
+                            <span class="tech-tag">Jenkins</span>
+                            <span class="tech-tag">Travis CI</span>
+                            <span class="tech-tag">Ansible</span>
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">Grafana</span>
+                            <span class="tech-tag">ELK Stack</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Systems Engineer</h3>
+                            <span class="timeline-company">RigNet, a Viasat Company</span>
+                            <span class="timeline-date">2019 - 2020</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Conducted proof-of-concept projects for new product development initiatives, with rigorous evaluation of emerging technologies to enhance service offerings</li>
+                                <li>Developed software and automation tools for integration of encryption key orchestration management system with Cyphre BTX Security Platform (HSM), utilizing proprietary BlackTIE encryption for secure site-to-site communications</li>
+                                <li>Authored automation tools and maintained custom scripts to streamline software development and testing lifecycles, resulting in improved efficiency and reduced time-to-market deployment</li>
+                                <li>Designed, developed, and implemented software automation and integration tools for encryption key orchestration, including platform to facilitate diverse application integration with Cyphre BTX Security Platform using BlackTie encryption methods</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Encryption</span>
+                            <span class="tech-tag">HSM</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">BlackTIE</span>
+                            <span class="tech-tag">Security Platform</span>
+                            <span class="tech-tag">Scripting</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Advanced Customer Support Engineer</h3>
+                            <span class="timeline-company">SoftLayer (IBM Cloud)</span>
+                            <span class="timeline-date">2015 - 2016</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Provided advanced technical support for major cloud provider, specializing in comprehensive suite of datacenter and cloud hosting products and services</li>
+                                <li>Primary focus on VMware ESX and vCenter, DNS, CDN, and VLAN network configurations and troubleshooting, including IPMI, PXE boot recovery and other remote management</li>
+                                <li>In-depth troubleshooting and resolution of complex customer issues across wide array of technologies</li>
+                                <li>Served as escalation point for vendor relationships with Citrix, VMware, SendGrid, Brocade, and Fortinet</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">IBM Cloud</span>
+                            <span class="tech-tag">VMware</span>
+                            <span class="tech-tag">Networking</span>
+                            <span class="tech-tag">Load Balancing</span>
+                            <span class="tech-tag">CDN</span>
+                            <span class="tech-tag">Vyatta</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Security Analyst</h3>
+                            <span class="timeline-company">Alert Logic</span>
+                            <span class="timeline-date">2014</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Conducted comprehensive security audits and compliance assessments for PCI DSS, HIPAA, GLBA, and SOX requirements</li>
+                                <li>Analyzed system logs and network traffic to detect and respond to security threats in real-time</li>
+                                <li>Created reports to identify network anomalies and analyze traffic patterns to reduce network chatter</li>
+                                <li>Collaborated with security teams proactively to mitigate detected threats from security alerts and monitoring systems</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">Compliance</span>
+                            <span class="tech-tag">PCI DSS</span>
+                            <span class="tech-tag">HIPAA</span>
+                            <span class="tech-tag">SIEM</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Marine IT Support Specialist</h3>
+                            <span class="timeline-company">CGGVeritas</span>
+                            <span class="timeline-date">2012 - 2013</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Leveraged PXE boot imaging system to efficiently deploy and standardize workstations and virtual machines, optimizing asset management for field operations</li>
+                                <li>Developed and implemented offline machine mirroring and storage preparation processes for vessel system updates, leading to yearly savings of satellite communications expenses in the millions</li>
+                                <li>Aligned with VSAT vendors in the physical building and deployment of new satellite systems during vessel port calls to facilitate federally mandated frequency band transitions</li>
+                                <li>Improved operational consistency and reduced remote support overhead by implementing standard operating system builds across approximately 50% of the seismic vessel fleet during limited port call windows</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">PXE Boot</span>
+                            <span class="tech-tag">Virtualization</span>
+                            <span class="tech-tag">VSAT</span>
+                            <span class="tech-tag">Asset Management</span>
+                            <span class="tech-tag">Satellite Systems</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>IT Consultant / Systems Engineer</h3>
+                            <span class="timeline-company">Sconet International</span>
+                            <span class="timeline-date">2009 - 2011</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Oversaw IT infrastructure for 40+ diverse client sites, providing proactive management, technical support, and ensuring operational stability across varied environments</li>
+                                <li>Engineered and executed multiple server migrations, transitioning client workloads from aging physical infrastructure to efficient and resilient in-house virtualized environment</li>
+                                <li>Successfully planned and executed mail server migrations for on-premise solutions with detailed planning, user communication, and smooth transition with minimal disruption</li>
+                                <li>Administered and maintained existing telephone systems for diverse client base, supporting platforms from Avaya, Nortel, and Toshiba</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Server Migration</span>
+                            <span class="tech-tag">Virtualization</span>
+                            <span class="tech-tag">Mail Servers</span>
+                            <span class="tech-tag">VoIP</span>
+                            <span class="tech-tag">Avaya</span>
+                            <span class="tech-tag">Nortel</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Interim CTO</h3>
+                            <span class="timeline-company">Eleven2</span>
+                            <span class="timeline-date">2009</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Led strategic technology initiatives and infrastructure planning for web hosting company managing 200+ Linux servers with around 8000 IP addresses</li>
+                                <li>Designed and implemented Nagios monitoring system performing 200,000+ health checks every 5 minutes</li>
+                                <li>Developed custom SNMP monitoring solutions using Bash and Perl for comprehensive infrastructure visibility</li>
+                                <li>Developed SQL database backup solution performing backups on 100,000+ SQL databases, ensuring data integrity and disaster recovery readiness</li>
+                                <li>Integrated billing platform with help desk software, streamlining customer service operations</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Nagios</span>
+                            <span class="tech-tag">SNMP</span>
+                            <span class="tech-tag">Bash</span>
+                            <span class="tech-tag">Perl</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Web Hosting</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Network Administrator / Helpdesk</h3>
+                            <span class="timeline-company">Idera</span>
+                            <span class="timeline-date">2008 - 2009</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Maintained the operational efficiency of a VoIP and PBX phone system</li>
+                                <li>Managed and built-out diverse server environments for production, development and QA environments across multiple sites</li>
+                                <li>Monitored the performance and stability of critical infrastructure and datacenter deployments for a multi-site and multi-brand software conglomerate</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">VoIP</span>
+                            <span class="tech-tag">PBX</span>
+                            <span class="tech-tag">Server Management</span>
+                            <span class="tech-tag">Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Network Administrator</h3>
+                            <span class="timeline-company">Righteous Software, Inc.</span>
+                            <span class="timeline-date">2006 - 2007</span>
+                        </div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Served as key early team member responsible for building upon and maintaining foundational IT infrastructure for fast-growing backup software company (later acquired by BBS Technologies)</li>
+                                <li>Managed existing network switches and LDAP server, alongside build-out and ongoing administration of network devices (routers, firewalls, load balancers), servers and workstations</li>
+                                <li>Established and meticulously maintained comprehensive library of base operating system images and repositories, encompassing all major and minor versions of key platforms</li>
+                                <li>Engineered highly effective custom Linux Recovery OS and PXE environment, uniquely designed for reliable bare-metal recovery across heterogeneous server hardware within SoftLayer (now IBM Cloud) management network</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">LDAP</span>
+                            <span class="tech-tag">PXE</span>
+                            <span class="tech-tag">Network Devices</span>
+                            <span class="tech-tag">Bare Metal Recovery</span>
+                            <span class="tech-tag">Custom OS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Simple-Secure FTP Daemon</h3>
+                        <div class="project-meta">
+                            <span class="project-duration">Ongoing</span>
+                            <span class="project-role">Developer</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>A secure and straightforward FTP server implementation written in C++. Provides lightweight file transfer capabilities with security features and efficient resource management.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">FTP</span>
+                        <span class="tech-tag">Security</span>
+                        <span class="tech-tag">Network Programming</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SimpleDaemons/simple-sftpd" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project
+                        </a>
+                        <a href="https://github.com/SimpleDaemons/simple-sftpd" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Simple TFTP Daemon</h3>
+                        <div class="project-meta">
+                            <span class="project-duration">Ongoing</span>
+                            <span class="project-role">Developer</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>A minimalistic Trivial File Transfer Protocol server designed for simplicity and efficiency. Ideal for bootstrapping and lightweight file transfers in network environments.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">TFTP</span>
+                        <span class="tech-tag">UDP</span>
+                        <span class="tech-tag">Bootstrapping</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SimpleDaemons/simple-tftpd" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project
+                        </a>
+                        <a href="https://github.com/SimpleDaemons/simple-tftpd" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Simple DHCP Daemon</h3>
+                        <div class="project-meta">
+                            <span class="project-duration">Ongoing</span>
+                            <span class="project-role">Developer</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>A lightweight Dynamic Host Configuration Protocol server for managing network configurations. Provides automatic IP address assignment and network parameter distribution.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">DHCP</span>
+                        <span class="tech-tag">UDP</span>
+                        <span class="tech-tag">Network Management</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SimpleDaemons/simple-dhcpd" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project
+                        </a>
+                        <a href="https://github.com/SimpleDaemons/simple-dhcpd" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Simple HTTP Daemon</h3>
+                        <div class="project-meta">
+                            <span class="project-duration">Ongoing</span>
+                            <span class="project-role">Developer</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>A basic HTTP server for serving web content with minimal overhead. Designed for embedded systems and lightweight web serving applications.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">HTTP</span>
+                        <span class="tech-tag">TCP</span>
+                        <span class="tech-tag">Web Server</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SimpleDaemons/simple-httpd" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project
+                        </a>
+                        <a href="https://github.com/SimpleDaemons/simple-httpd" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Simple NTP Daemon</h3>
+                        <div class="project-meta">
+                            <span class="project-duration">Ongoing</span>
+                            <span class="project-role">Developer</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>A simple Network Time Protocol server to synchronize system clocks across networks. Provides accurate time distribution with minimal resource usage.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">NTP</span>
+                        <span class="tech-tag">UDP</span>
+                        <span class="tech-tag">Time Synchronization</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SimpleDaemons/simple-ntpd" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project
+                        </a>
+                        <a href="https://github.com/SimpleDaemons/simple-ntpd" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Simple UTC Daemon</h3>
+                        <div class="project-meta">
+                            <span class="project-duration">Ongoing</span>
+                            <span class="project-role">Developer</span>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>A daemon for managing Coordinated Universal Time synchronization across systems. Ensures consistent timekeeping in distributed environments.</p>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">UTC</span>
+                        <span class="tech-tag">Time Management</span>
+                        <span class="tech-tag">System Services</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SimpleDaemons/simple-utcd" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project
+                        </a>
+                        <a href="https://github.com/SimpleDaemons/simple-utcd" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Activity Section -->
+    <section id="github" class="section">
+        <div class="container">
+            <h2 class="section-title">GitHub Activity</h2>
+            <div class="github-stats">
+                <div>
+                    <div class="github-header">
+                        <i class="fab fa-github"></i>
+                        <h3>Recent Projects</h3>
+                    </div>
+                    <div class="github-projects">
+                        <div class="github-project">
+                            <h4>Simple SMTP Mailer</h4>
+                            <p>C++ SMTP mailer with Email API support</p>
+                            <div class="github-tech">
+                                <span class="tech-badge">C++</span>
+                                <span class="tech-badge">SMTP</span>
+                                <span class="tech-badge">Email API</span>
+                            </div>
+                            <a href="https://github.com/blburns/simple-smtp-mailer" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </a>
+                        </div>
+                        
+                        <div class="github-project">
+                            <h4>Simple-Secure FTP Daemon</h4>
+                            <p>Secure FTP server implementation with lightweight design</p>
+                            <div class="github-tech">
+                                <span class="tech-badge">C++</span>
+                                <span class="tech-badge">FTP</span>
+                                <span class="tech-badge">Security</span>
+                            </div>
+                            <a href="https://github.com/SimpleDaemons/simple-sftpd" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </a>
+                        </div>
+                        
+                        <div class="github-project">
+                            <h4>Simple TFTP Daemon</h4>
+                            <p>Minimalistic TFTP server for bootstrapping and lightweight transfers</p>
+                            <div class="github-tech">
+                                <span class="tech-badge">C++</span>
+                                <span class="tech-badge">TFTP</span>
+                                <span class="tech-badge">UDP</span>
+                            </div>
+                            <a href="https://github.com/SimpleDaemons/simple-tftpd" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </a>
+                        </div>
+                        
+                        <div class="github-project">
+                            <h4>Simple DHCP Daemon</h4>
+                            <p>Lightweight DHCP server for network configuration management</p>
+                            <div class="github-tech">
+                                <span class="tech-badge">C++</span>
+                                <span class="tech-badge">DHCP</span>
+                                <span class="tech-badge">Network</span>
+                            </div>
+                            <a href="https://github.com/SimpleDaemons/simple-dhcpd" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </a>
+                        </div>
+                        
+                        <div class="github-project">
+                            <h4>Simple HTTP Daemon</h4>
+                            <p>Basic HTTP server for embedded systems and lightweight web serving</p>
+                            <div class="github-tech">
+                                <span class="tech-badge">C++</span>
+                                <span class="tech-badge">HTTP</span>
+                                <span class="tech-badge">Web Server</span>
+                            </div>
+                            <a href="https://github.com/SimpleDaemons/simple-httpd" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </a>
+                        </div>
+                        
+                        <div class="github-project">
+                            <h4>Simple NTP Daemon</h4>
+                            <p>Network Time Protocol server for system clock synchronization</p>
+                            <div class="github-tech">
+                                <span class="tech-badge">C++</span>
+                                <span class="tech-badge">NTP</span>
+                                <span class="tech-badge">Time Sync</span>
+                            </div>
+                            <a href="https://github.com/SimpleDaemons/simple-ntpd" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </a>
+                        </div>
+                        
+                        <div class="github-project">
+                            <h4>Simple UTC Daemon</h4>
+                            <p>UTC time synchronization daemon for distributed systems</p>
+                            <div class="github-tech">
+                                <span class="tech-badge">C++</span>
+                                <span class="tech-badge">UTC</span>
+                                <span class="tech-badge">Time Management</span>
+                            </div>
+                            <a href="https://github.com/SimpleDaemons/simple-utcd" target="_blank" class="github-link">
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="github-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Development Focus</h3>
+                    </div>
+                    <div class="dev-focus">
+                        <div class="focus-item">
+                            <i class="fas fa-server"></i>
+                            <span>Infrastructure & DevOps</span>
+                        </div>
+                        <div class="focus-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>Automation & Scripting</span>
+                        </div>
+                        <div class="focus-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security & Compliance</span>
+                        </div>
+                        <div class="focus-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Certifications & Achievements</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Transportation Worker Identification Credential (TWIC)</h4>
+                        <p>Transportation Security Administration</p>
+                        <span class="cert-status completed">2012 - 2017</span>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Basic Offshore Safety Induction and Emergency Training (BOSIET)</h4>
+                        <p>OPITO</p>
+                        <span class="cert-status completed">2013 - 2016</span>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Electrical License</h4>
+                        <p>TRDL</p>
+                        <span class="cert-status completed">2015 - 2018</span>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>AWS Cloud Architecture Associate</h4>
+                        <p>Amazon Web Services</p>
+                        <span class="cert-status completed">2023</span>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Google Cloud Professional Cloud Architect</h4>
+                        <p>Google Cloud Platform</p>
+                        <span class="cert-status planning">Planning - Expected Q4 2026</span>
+                    </div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Project Management Professional (PMP)</h4>
+                        <p>Project Management Institute</p>
+                        <span class="cert-status planning">Planning - Expected Q4 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+1 (737) 205-0375</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>contact@blburns.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Austin, TX • USA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/blburns1</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/blburns" target="_blank">github.com/blburns</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 B.L. Burns. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/blburns1" class="social-link" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/blburns" class="social-link" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:contact@blburns.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/enhanced-scripts.js"></script>
+    <script src="assets/js/palette-selector.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</body>
+</html>
