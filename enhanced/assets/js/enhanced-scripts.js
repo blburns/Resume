@@ -462,17 +462,36 @@ function animateCounters() {
     const counters = document.querySelectorAll('.stat-number');
     
     counters.forEach(counter => {
-        const target = parseInt(counter.textContent);
-        const increment = target / 100;
+        const originalText = counter.textContent;
+        const isPercentage = originalText.includes('%');
+        const isPlus = originalText.includes('+');
+        
+        // Extract the numeric value, handling decimals
+        const numericValue = parseFloat(originalText.replace(/[^\d.]/g, ''));
+        const increment = numericValue / 100;
         let current = 0;
         
         const updateCounter = () => {
-            if (current < target) {
+            if (current < numericValue) {
                 current += increment;
-                counter.textContent = Math.ceil(current) + (counter.textContent.includes('%') ? '%' : '+');
+                
+                // Format the number based on original format
+                if (isPercentage) {
+                    if (numericValue % 1 !== 0) {
+                        // Preserve decimal places for decimal percentages
+                        counter.textContent = current.toFixed(1) + '%';
+                    } else {
+                        counter.textContent = Math.ceil(current) + '%';
+                    }
+                } else if (isPlus) {
+                    counter.textContent = Math.ceil(current) + '+';
+                } else {
+                    counter.textContent = Math.ceil(current);
+                }
+                
                 requestAnimationFrame(updateCounter);
             } else {
-                counter.textContent = counter.textContent;
+                counter.textContent = originalText;
             }
         };
         
