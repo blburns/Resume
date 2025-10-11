@@ -1830,9 +1830,9 @@ body {
     }
     
     .nav-menu.active {
-        display: flex;
-        left: 0;
-        transform: translateX(0);
+        display: flex !important;
+        left: 0 !important;
+        transform: translateX(0) !important;
     }
     
     .nav-menu .nav-link {
