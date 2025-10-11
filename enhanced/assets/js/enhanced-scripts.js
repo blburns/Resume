@@ -44,12 +44,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Mobile Menu Toggle
 function toggleMobileMenu() {
+    console.log('toggleMobileMenu called'); // Debug log
     const navMenu = document.querySelector('.nav-menu');
     const mobileToggle = document.querySelector('.mobile-menu-toggle i');
     
-    navMenu.classList.toggle('active');
-    mobileToggle.classList.toggle('fa-bars');
-    mobileToggle.classList.toggle('fa-times');
+    console.log('navMenu:', navMenu); // Debug log
+    console.log('mobileToggle:', mobileToggle); // Debug log
+    
+    if (navMenu && mobileToggle) {
+        console.log('Before toggle - navMenu classes:', navMenu.className); // Debug log
+        navMenu.classList.toggle('active');
+        mobileToggle.classList.toggle('fa-bars');
+        mobileToggle.classList.toggle('fa-times');
+        console.log('After toggle - navMenu classes:', navMenu.className); // Debug log
+        
+        // Force reflow for Firefox compatibility
+        navMenu.offsetHeight;
+    } else {
+        console.log('Elements not found!'); // Debug log
+    }
 }
 
 // Smooth Scrolling for Navigation Links
