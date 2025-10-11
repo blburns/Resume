@@ -15,17 +15,6 @@ function toggleTheme() {
     themeIcon.className = currentTheme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
 }
 
-// Mobile Menu Toggle
-function toggleMobileMenu() {
-    const navMenu = document.querySelector('.nav-menu');
-    const mobileToggle = document.querySelector('.mobile-menu-toggle');
-    
-    if (navMenu && mobileToggle) {
-        navMenu.classList.toggle('active');
-        mobileToggle.classList.toggle('active');
-    }
-}
-
 // Close mobile menu when clicking on a link
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -36,7 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', () => {
             if (navMenu && mobileToggle) {
                 navMenu.classList.remove('active');
-                mobileToggle.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             }
         });
     });
